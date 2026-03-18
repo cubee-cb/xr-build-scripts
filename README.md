@@ -6,3 +6,4 @@ You will need to install any dependencies manually. These should be found on eac
 
 `update_all_cubee.sh` does the same, but uses my fork of WayVR instead.
 
+`update_wivrn_headless.sh` also depends on and restarts a `wivrn-git` systemd service after updating. This is intended for, as it says on the tin, headless usage, and thus doesn't build the dashboard.
