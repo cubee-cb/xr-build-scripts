@@ -1,21 +1,9 @@
-[submodule "WiVRn"]
-	path = WiVRn
-	url = https://github.com/WiVRn/WiVRn.git
-[submodule "WayVRcubee"]
-	path = WayVRcubee
-	url = https://github.com/cubee-cb/wayvr.git
-[submodule "WayVR"]
-	path = WayVR
-	url = https://github.com/wlx-team/wayvr.git
 [submodule "xrizer"]
 	path = xrizer
 	url = https://github.com/Supreeeme/xrizer.git
 [submodule "wayvr"]
 	path = wayvr
 	url = https://github.com/wlx-team/wayvr.git
-[submodule "wayvr-cubee"]
-	path = wayvr-cubee
-	url = https://github.com/cubee-cb/wayvr.git
 [submodule "wivrn"]
 	path = wivrn
 	url = https://github.com/WiVRn/WiVRn.git
