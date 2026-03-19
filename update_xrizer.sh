@@ -6,7 +6,7 @@ echo "==============================================="
 
 cd xrizer
 git fetch
-if [[ $XR_UP_BUILD_ALL || `git rev-list HEAD...origin/main --count` > 0 ]]; then
+if [[ $XR_UP_FORCE_BUILD || `git rev-list HEAD...origin/main --count` > 0 ]]; then
   git pull
   cargo xbuild --release
 else
