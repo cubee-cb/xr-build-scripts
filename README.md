@@ -2,6 +2,7 @@ Build scripts for my XR stack (WiVRn Dashboard, xrizer, WayVR)
 
 Run `build_all.sh` first; this will pull all repos and force a build. From then on you can run just `update_all.sh` and builds will only run if new changes were received.
 - These will create Release builds by default.
+- You can also run `XR_UP_FORCE_BUILD=1 ./update_wayvr.sh` for example to skip git checks and force a build.
 
 You will need to install any dependencies for building each application manually. These should be found on each component's respective build instructions.
 
