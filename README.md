@@ -9,5 +9,10 @@ You will need to install any dependencies for building each application manually
 
 WayVR is set up to build Wayland OpenXR support only. To change this, edit `XR_UP_WAYVR_FEATURES` in `update_wayvr.sh` to have the features you want (e.g. `"x11,openvr"` for X11 SteamVR).
 
+Issues:
+- WiVRn seems to not set up the runtime properly when running from outside the build dir - no OpenXR programs can connect to the runtime; WayVR and `xrgears` for example cannot find it.
+  - Instead, 
+  - The code to install WiVRn to `opt` is still present, however it is commented out.
+
 Reference:
 - Git checks - https://stackoverflow.com/a/50737015
