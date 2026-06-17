@@ -1,13 +1,18 @@
 Build scripts for my XR stack (WiVRn Dashboard, xrizer, WayVR)
 
 Run `build_all.sh` first; this will pull all repos and force a build. From then on you can run just `update_all.sh` and builds will only run if new changes were received.
-- Built files will be copied to `/opt/` (you will need permission to run sudo)
+- Built files will be copied to `/opt/` (you will need sudo permission for this part, though you can also just run from the build folders directly instead)
 - Scripts are set up to create Release builds.
 - You can also run `XR_UP_FORCE_BUILD=1 ./update_wayvr.sh` for example to skip git checks and force a build.
 
 You will need to install any dependencies for building each application manually. These should be found on each component's respective build instructions.
 
 WayVR is set up to build Wayland OpenXR support only. To change this, edit `XR_UP_WAYVR_FEATURES` in `update_wayvr.sh` to have the features you want (e.g. `"x11,openvr"` for X11 SteamVR).
+
+Assumptions:
+- `/opt/` is where "optional" software will be installed. WiVRn will look for xrizer here.
+- `~/.config/environment.d/` is read by the login session to apply "global" environment variables.
+- WayVR is set up to build only for Wayland+OpenXR. To change this, change `XR_UP_WAYVR_FEATURES` in `update_wayvr.sh` to include the features you want (e.g. `"x11,openvr"` for SteamVR on X11).
 
 Issues:
 - WiVRn seems to not start up the runtime properly (if at all) when running from outside the build dir - no OpenXR programs can connect to the runtime; WayVR and `xrgears` for example cannot find it.
