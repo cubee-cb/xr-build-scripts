@@ -7,3 +7,6 @@
 [submodule "wivrn"]
 	path = wivrn
 	url = https://github.com/WiVRn/WiVRn.git
+[submodule "vapor"]
+	path = vapor
+	url = git@github.com:micheal65536/VapoR.git

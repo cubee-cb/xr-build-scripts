@@ -12,7 +12,8 @@ WayVR is set up to build Wayland OpenXR support only. To change this, edit `XR_U
 Assumptions:
 - `/opt/` is where "optional" software will be installed. WiVRn will look for xrizer here.
 - `~/.config/environment.d/` is read by the login session to apply "global" environment variables.
-- WayVR is set up to build only for Wayland+OpenXR. To change this, change `XR_UP_WAYVR_FEATURES` in `update_wayvr.sh` to include the features you want (e.g. `"x11,openvr"` for SteamVR on X11).
+  - This is used to set `PRESSURE_VESSEL_IMPORT_OPENXR_1_RUNTIMES` globally, so it doesn't have to be done per-game.
+- WayVR is set up to build only Wayland+OpenXR support. To change this, change `XR_UP_WAYVR_FEATURES` in `update_wayvr.sh` to include the features you want (e.g. `"x11,openvr"` for SteamVR on X11).
 
 Issues:
 - WiVRn seems to not start up the runtime properly (if at all) when running from outside the build dir - no OpenXR programs can connect to the runtime; WayVR and `xrgears` for example cannot find it.
