@@ -36,6 +36,8 @@ if [[ $XR_UP_FORCE_BUILD || `git rev-list HEAD...origin/master --count` > 0 ]]; 
     echo "Linked dashboard executables to /opt/wivrn/"
   fi
 
+  ./build_wivrn_client.sh
+
   echo "PRESSURE_VESSEL_IMPORT_OPENXR_1_RUNTIMES=1" > ~/.config/environment.d/wivrn.conf
   echo "Added environment variable to ~/.config/environment.d"
 
